@@ -14,7 +14,6 @@
  * to interface with multiple modeling platforms.
  */
 
-#include "../common/def.hpp"
 
 // traits for interfacing with TMB
 
