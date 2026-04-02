@@ -24,31 +24,7 @@
 // issue
 #include <math.h>
 
-#ifdef FIMS_WINDOWS
-#ifdef FALSE
-#pragma push_macro("FALSE")
-#undef FALSE
-#define FIMS_RESTORE_FALSE_MACRO
-#endif
-#ifdef TRUE
-#pragma push_macro("TRUE")
-#undef TRUE
-#define FIMS_RESTORE_TRUE_MACRO
-#endif
-#endif
-
 #include <TMB.hpp>
-
-#ifdef FIMS_WINDOWS
-#ifdef FIMS_RESTORE_TRUE_MACRO
-#pragma pop_macro("TRUE")
-#undef FIMS_RESTORE_TRUE_MACRO
-#endif
-#ifdef FIMS_RESTORE_FALSE_MACRO
-#pragma pop_macro("FALSE")
-#undef FIMS_RESTORE_FALSE_MACRO
-#endif
-#endif
 
 // define REPORT, ADREPORT, and SIMULATE
 #define FIMS_REPORT_F(name, F)                                         \
