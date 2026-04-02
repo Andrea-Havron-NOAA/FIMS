@@ -10,8 +10,8 @@
 #ifndef FIMS_INTERFACE_RCPP_RCPP_OBJECTS_RCPP_RECRUITMENT_HPP
 #define FIMS_INTERFACE_RCPP_RCPP_OBJECTS_RCPP_RECRUITMENT_HPP
 
-#include "rcpp_interface_base.hpp"
 #include "../../../population_dynamics/recruitment/recruitment.hpp"
+#include "rcpp_interface_base.hpp"
 
 /**
  * @brief Rcpp interface that serves as the parent class for Rcpp recruitment
@@ -191,7 +191,7 @@ class BevertonHoltRecruitmentInterface : public RecruitmentInterfaceBase {
     BevHolt.logit_steep.resize(1);
     BevHolt.logit_steep[0] = this->logit_steep[0].initial_value_m;
     if (this->logit_steep[0].initial_value_m == 1.0) {
-      Rcpp::warning(
+      Rf_warning(
           "Steepness is subject to a logit transformation. "
           "Fixing it at 1.0 is not currently possible.");
     }

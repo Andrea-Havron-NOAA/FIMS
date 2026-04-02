@@ -9,8 +9,8 @@
 #ifndef FIMS_INTERFACE_RCPP_RCPP_OBJECTS_RCPP_GROWTH_HPP
 #define FIMS_INTERFACE_RCPP_RCPP_OBJECTS_RCPP_GROWTH_HPP
 
-#include "rcpp_interface_base.hpp"
 #include "../../../population_dynamics/growth/growth.hpp"
+#include "rcpp_interface_base.hpp"
 
 /**
  * @brief Rcpp interface that serves as the parent class for Rcpp growth
